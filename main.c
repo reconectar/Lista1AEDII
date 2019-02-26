@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
+#include <locale.h>
 
 
 
@@ -369,30 +370,130 @@ void q22(){
     printf("%s e o nome da pessoa mais nova, cuja idade e = %d\n", nomeMaisNova, idadeNovo);
 }
 
-int main()
-{
-    //q1();
-    //q2();
-    //q3();
-    //q4();
-    //q5();
-    //q6();
-    //q7();
-    //q8();
-    //q9();
-    //q10();
-    //q11();
-    //q12();
-    //q13();
-    //q14();
-    //q15();
-    //q16();
-    //q17();
-    //q18();
-    //q19();
-    //q20();
-    //q21();
-    //q22();
+void menu(){
+    int n;
 
+    printf("1. Q1");
+    printf("\n2. Q2");
+    printf("\n3. Q3");
+    printf("\n4. Q4");
+    printf("\n5. Q5");
+    printf("\n6. Q6");
+    printf("\n7. Q7");
+    printf("\n8. Q8");
+    printf("\n9. Q9");
+    printf("\n10. Q10");
+    printf("\n11. Q11");
+    printf("\n12. Q12");
+    printf("\n13. Q13");
+    printf("\n14. Q14");
+    printf("\n15. Q15");
+    printf("\n16. Q16");
+    printf("\n17. Q17");
+    printf("\n18. Q18");
+    printf("\n19. Q19");
+    printf("\n20. Q20");
+    printf("\n21. Q21");
+    printf("\n22. Q22");
+    printf("\n\n23. SAIR");
+    printf("\n\nInsira o numero do exercicio que deseja: ");
+    scanf("%d",&n);
+    system("cls");
+
+    switch(n){
+        case 1:
+            q1();
+            break;
+        case 2:
+            q2();
+            break;
+        case 3:
+            q3();
+            break;
+        case 4:
+            q4();
+            break;
+        case 5:
+            q5();
+            break;
+        case 6:
+            q6();
+            break;
+        case 7:
+            q7();
+            break;
+        case 8:
+            q8();
+            break;
+        case 9:
+            q9();
+            break;
+        case 10:
+            q10();
+            break;
+        case 11:
+            q11();
+            break;
+        case 12:
+            q12();
+            break;
+        case 13:
+            q13();
+            break;
+        case 14:
+            q14();
+            break;
+        case 15:
+            q15();
+            break;
+        case 16:
+            q16();
+            break;
+        case 17:
+            q17();
+            break;
+        case 18:
+            q18();
+            break;
+        case 19:
+            q19();
+            break;
+        case 20:
+            q20();
+            break;
+        case 21:
+            q21();
+            break;
+        case 22:
+            q22();
+            break;
+         case 23:
+            return 0;
+        default:
+            printf("\nInsira um numero válido\n");
+            system("pause");
+            system("cls");
+            menu();
+    }
     return 0;
+}
+
+int main(){
+    setlocale(LC_ALL, "portuguese");
+
+    int n=0;
+    menu();
+    while(n!=2){
+        printf("Deseja executar outro programa?");
+        printf("\n1.Sim");
+        printf("\n2.Nao\n");
+        scanf("%d",&n);
+        system("cls");
+        if(n==1){
+            menu();
+        }else{
+            printf("\nFim do programa\n");
+            return 0;
+        }
+    }
 }
